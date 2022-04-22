@@ -1,12 +1,12 @@
 
-package controles;
+package controlededecisao;
 
 /**
  *
  * @author anapriscilla
  */
 
-public class ifQuadrinho {
+public class IfQuadrinho {
     public static void main(String[] args) {
         
         boolean temBatata = true;
