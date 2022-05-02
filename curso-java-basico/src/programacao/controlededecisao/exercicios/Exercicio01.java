@@ -1,7 +1,7 @@
 /*
 1 - Faça um programa que peça dois números e imprima o maior deles.
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -23,10 +23,10 @@ public class Exercicio01 {
         int numero2 = scan.nextInt();
 
         if (numero1 > numero2) {
-            System.out.println("\nO maior número é: " + numero1);
-        } else if (numero2 > numero1) {
-             System.out.println("\nO maior número é: " + numero2);
-        }
+            System.out.println("\nO 1º número maior: " + numero1);
+        } else {
+             System.out.println("\nO 2º número maior: " + numero2);
+        } 
         
     }
     

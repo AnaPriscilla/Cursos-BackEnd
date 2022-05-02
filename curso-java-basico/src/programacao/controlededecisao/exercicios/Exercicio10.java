@@ -4,7 +4,7 @@ Peça para digitar M-matutino ou V-vespertino ou N-noturno.
 Imprima a mensagem "Bom Dia!", "Boa Tarde!", "Boa Noite!" ou
 "Valor Inválido!", conforme o caso.
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -25,11 +25,11 @@ public class Exercicio10 {
         
         String turno = scan.next();
         
-        if (turno.equals("M")) {
+        if (turno.equalsIgnoreCase("M")) {
             System.out.println("Bom Dia!");
-        } else if (turno.equals("V")){
+        } else if (turno.equalsIgnoreCase("V")){
             System.out.println("Bom Tarde!");
-        } else if (turno.equals("N")){
+        } else if (turno.equalsIgnoreCase("N")){
             System.out.println("Bom Noite!");
         } else {
             System.out.println("Valor Inválido");

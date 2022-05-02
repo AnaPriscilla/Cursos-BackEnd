@@ -1,6 +1,6 @@
 /*
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -13,31 +13,50 @@ public class Exercicio20 {
         Scanner scan = new Scanner(System.in);
         
         System.out.println("————INVESTIGAÇÃO-CRIMINAL————" + "\n" +
-                "Digite [1] para SIM ou [0] para NÃO" + "\n" +
+                "Digite SIM ou NÃO" + "\n" +
                 "RESPONDA AS PERGUNTAS A SEGUIR: " + "\n");
         
         System.out.print("Telefonou para a vítima? ");
-        int pergunta1 = scan.nextInt();
+        String pergunta1 = scan.next();
         System.out.print("Esteve no local do crime? ");
-        int pergunta2 = scan.nextInt();
+        String pergunta2 = scan.next();
         System.out.print("Mora perto da vítima? ");
-        int pergunta3 = scan.nextInt();
+        String pergunta3 = scan.next();
         System.out.print("Devia para a vítima? ");
-        int pergunta4 = scan.nextInt();
+        String pergunta4 = scan.next();
         System.out.print("Já trabalhou com a vítima? ");
-        int pergunta5 = scan.nextInt();
+        String pergunta5 = scan.next();
         
-        int resultado = (pergunta1 + pergunta2 + pergunta3 + pergunta4 + pergunta5);
+        int cont = 0;
         
-        if (resultado == 2) {
-            System.out.println("Classificação: SUSPEITO");
-        } else if (resultado == 3 || resultado == 4) {
-            System.out.println("Classificação: CÚMPLICE");
-        } else if (resultado == 5) {
-            System.out.println("Classificação: ASSASSINO");
-        } else {
-            System.out.println("Classificação: INOCENTE");
+        if(pergunta1.equalsIgnoreCase("sim")) {
+            cont++;
         }
-       
+        
+        if(pergunta2.equalsIgnoreCase("sim")) {
+            cont++;
+        }
+        
+        if(pergunta3.equalsIgnoreCase("sim")) {
+            cont++;
+        }
+        
+        if(pergunta4.equalsIgnoreCase("sim")) {
+            cont++;
+        }
+        
+        if(pergunta5.equalsIgnoreCase("sim")) {
+            cont++;
+        }
+        
+        if(cont == 2){
+            System.out.println("Suspeita");
+        }else if (cont == 3 || cont == 4) {
+            System.out.println("Cúmplice");
+        }else if (cont == 5) {
+            System.out.println("Assassino");
+        }else if (cont == 0) {
+            System.out.println("Inocente");
+        }
     }
 }

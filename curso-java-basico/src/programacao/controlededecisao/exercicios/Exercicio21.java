@@ -1,6 +1,6 @@
 /*
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -24,24 +24,42 @@ public class Exercicio21 {
         
         System.out.print("Digite a quantidade de litros: ");
         double litros = scan.nextDouble();
-        System.out.print("Digite [1] para A-álcool ou [2] para G-gasolina: ");
-        int combustivel = scan.nextInt();
+        System.out.print("Qual o tipo de combustível?" + "\n" +
+                "Digite alcool ou gasolina: ");
+        String combustivel = scan.next();
         
-        double valcool = (litros * 1.90);
-        double vgasolina = (litros * 2.50);
+        double preco_gasolina = 2.50;
+        double preco_alcool = 1.90;
+        int desconto = 0;
+        double total = 0;
+        double total_desconto = 0;
         
-        if(litros < 20 && combustivel == 1){
-            System.out.println("Valor por litro sem o desconto: " + valcool + "\nSeu desconto é de: " 
-                    + (litros * 0.03) + "\nVocê vai pagar: R$ " + ((litros * 0.03) * litros));
-        } else if (litros >= 20 && combustivel == 1){
-            System.out.println("Valor por litro sem o desconto: " + valcool + "\nSeu desconto é de: " 
-                    + (litros * 0.05) + "\nVocê vai pagar: R$ " + ((litros * 0.05) * litros));
-        } else if (litros < 20 && combustivel == 2){
-            System.out.println("Valor por litro sem o desconto: " + vgasolina + "\nSeu desconto é de: " 
-                    + (litros * 0.04) + "\nVocê vai pagar: R$ " + ((litros * 0.04) * litros));
-        } else if (litros >= 20 && combustivel == 2) {
-            System.out.println("Valor por litro sem o desconto: " + vgasolina + "\nSeu desconto é de: " 
-                    + (litros * 0.06) + "\nVocê vai pagar: R$ " + ((litros * 0.06) * litros));
+        if (combustivel.equalsIgnoreCase("alcool")){
+            
+            if(litros <= 20) {
+                desconto = 3;
+            } else {
+                desconto = 5;
+                
+            }
+            
+            total = litros * preco_alcool;
+            
+        } else if (combustivel.equalsIgnoreCase("gasolina")){
+            
+            if (litros <= 20){
+                desconto = 4;
+            } else {
+                desconto = 6;
+            }
+            
+            total = litros * preco_gasolina;
         }
-    }
+        
+        total_desconto = (total / 100) * desconto;
+        
+        double preco_a_pagar = total - total_desconto;
+
+        System.out.println("Valor a ser pago: " + preco_a_pagar);
+    } 
 }

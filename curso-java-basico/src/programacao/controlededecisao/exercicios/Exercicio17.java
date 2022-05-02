@@ -4,7 +4,7 @@ INFORMAÇÕES SOBRE ANO BISSEXTO:
 2 - Não pode ser divisível por 100. Com isso, a divisão não é exata, ou seja, deixa resto diferente de zero.
 3 - Pode ser que seja divisível por 400.
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 

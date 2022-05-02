@@ -1,7 +1,7 @@
 /*
 4 - Faça um programa que verifique se uma letra digitada é vogal ou consoante.
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -18,20 +18,24 @@ public class Exercicio04 {
         
         System.out.print("Digite uma letra: ");
         String letra = scan.next();
-        
-        if (letra.equals("a")){
-            System.out.println("É uma vogal");
-        } else if (letra.equals("e")){
-            System.out.println("É uma vogal");
-        } else if (letra.equals("i")){
-            System.out.println("É uma vogal");
-        } else if (letra.equals("o")){
-            System.out.println("É uma vogal");
-        } else if (letra.equals("u")){
-            System.out.println("É uma vogal");
-        } else {
-            System.out.println("É uma consoante");
-        }
-        
+       
+       //Para contar a quantidade de caracteres é utilizar o método length()
+       if (letra.length() > 1) {
+           System.out.println("Não é uma letra válida");
+       } else {
+           switch(letra){
+               case "a": System.out.println("É uma vogal"); break;
+               case "e": System.out.println("É uma vogal"); break;
+               case "i": System.out.println("É uma vogal"); break;
+               case "o": System.out.println("É uma vogal"); break;
+               case "u": System.out.println("É uma vogal"); break;
+               case "A": System.out.println("É uma vogal"); break;
+               case "E": System.out.println("É uma vogal"); break;
+               case "I": System.out.println("É uma vogal"); break;
+               case "O": System.out.println("É uma vogal"); break;
+               case "U": System.out.println("É uma vogal"); break;
+               default: System.out.println("É uma consoante");
+           }
+       }
     }
 }

@@ -1,6 +1,6 @@
 /*
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -33,14 +33,14 @@ public class Exercicio12 {
             System.out.println("FGTS (11% - não é descontado)            " + "R$ " + fgts);
             System.out.println("Total de descontos                       " + "R$ " + inss);
             System.out.println("Salário Líquido                          " + "R$ " + (salariobruto - inss));
-        } else if (salariobruto  >= 900 && salariobruto <= 1500) {
+        } else if (salariobruto  > 900 && salariobruto <= 1500) {
             System.out.println("\nSalário Bruto:                           " + "R$ " + salariobruto);
             System.out.println("(-) IR   (5%)                            " + "R$ " + (salariobruto * 0.05));
             System.out.println("(-) INSS (10%)                           " + "R$ " + inss);
             System.out.println("FGTS (11% - não é descontado)            " + "R$ " + fgts);
             System.out.println("Total de descontos                       " + "R$ " + ((salariobruto * 0.05) + inss));
             System.out.println("Salário Líquido                          " + "R$ " + (salariobruto - ((salariobruto * 0.05) + inss)));
-        } else if (salariobruto >= 1500 && salariobruto <= 2500) {
+        } else if (salariobruto > 1500 && salariobruto <= 2500) {
             System.out.println("\nSalário Bruto:                            " + "R$ " + salariobruto);
             System.out.println("(-) IR   (10%)                            " + "R$ " + (salariobruto * 0.10));
             System.out.println("(-) INSS (10%)                            " + "R$ " + inss);

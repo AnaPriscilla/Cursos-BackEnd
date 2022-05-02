@@ -5,8 +5,7 @@ O programa deve calcular a média alcançada por aluno e apresentar:
     - A mensagem "Reprovado", se a média alcançada for menor do que sete;
     - A mensagem "Aprovado com Distinção", se a média for igual a dez.
  */
-package controlededecisao.exercicios;
-
+package programacao.controlededecisao.exercicios;
 import java.util.Scanner;
 
 /**
@@ -31,7 +30,7 @@ public class Exercicio05 {
             System.out.println("Aprovado com Distinção");
         } else if (media >= 7) {
             System.out.println("Aprovado");
-        } else if (media < 7) {
+        } else {
             System.out.println("Reprovado");
         }
         

@@ -1,6 +1,6 @@
 /*
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -25,14 +25,18 @@ public class Exercicio15 {
            Três lados forma um triângulo quando a soma de quaisquer,
            dois lados for maior que o terceiro. 
         */
-        
-        if (lado1 == lado2 && lado2 == lado3 && lado3 == lado1) {
-            System.out.println("É um triângulo EQUILÁTERO!");
-        } else if (lado1 != lado2 && lado2 != lado3 && lado3 != lado1) {
-            System.out.println("É um triângulo ESCALENO!");
+        if (((lado1 + lado2) > lado3) || ((lado1 + lado3) > lado2) || ((lado2 + lado3) > lado1)) {
+             if (lado1 == lado2 && lado2 == lado3 && lado3 == lado1) {
+                System.out.println("É um triângulo EQUILÁTERO!");
+            } else if (lado1 != lado2 && lado2 != lado3 && lado3 != lado1) {
+                System.out.println("É um triângulo ESCALENO!");
+            } else if (lado1 == lado2 || lado2 == lado3 || lado3 == lado1) {
+                System.out.println("É um triângulo ISÓCELES!");
+            } 
         } else {
-            System.out.println("É um triângulo ISOSCELES!");
+             System.out.println("Não é um triângulo!");
         }
+       
         
     }
 }

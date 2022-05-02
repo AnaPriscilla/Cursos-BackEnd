@@ -1,7 +1,7 @@
 /*
 7 - Faça um programa que leia três números e mostre o maior e o menor deles.
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -25,20 +25,20 @@ public class Exercicio07 {
         System.out.println("_______________________\n");
         
         //MAIOR
-        if (numero1 > numero2 && numero1 > numero3) {
+        if (numero1 >= numero2 && numero1 >= numero3) {
             System.out.print("O maior número é o " + numero1 + "\n");
-        } else if (numero2 > numero3 && numero2 > numero1) {
+        } else if (numero2 >= numero3 && numero2 >= numero1) {
             System.out.print("O maior número é o " + numero2 + "\n");
-        } else if (numero3 > numero2 && numero3 > numero1) {
+        } else if (numero3 >= numero2 && numero3 >= numero1) {
             System.out.print("O maior número é o " + numero3 + "\n");
         } 
         
         //MENOR
-        if (numero1 < numero2 && numero1 < numero3) {
+        if (numero1 <= numero2 && numero1 <= numero3) {
             System.out.print("O menor número é o " + numero1 + "\n");
-        }  else if (numero2 < numero3 && numero2 < numero1) {
+        }  else if (numero2 <= numero3 && numero2 <= numero1) {
             System.out.print("O menor número é o " + numero2 + "\n");
-        } else if (numero3 < numero2 && numero3 < numero1) {
+        } else if (numero3 <= numero2 && numero3 <= numero1) {
             System.out.print("O menor número é o " + numero3 + "\n");
         }
     }

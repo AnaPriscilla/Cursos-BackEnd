@@ -1,6 +1,6 @@
 /*
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -20,7 +20,7 @@ public class Exercicio02 {
         
         if (valor >= 0){
             System.out.println("Você digitou um número com valor POSITIVO");
-        } else if (valor < 0){
+        } else {
             System.out.println("Você digitou um número com valor NEGATIVO");
         }
     }

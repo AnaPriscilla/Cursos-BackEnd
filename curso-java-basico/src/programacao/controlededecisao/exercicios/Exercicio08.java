@@ -2,7 +2,7 @@
 8 - Faça um programa que pergunte o preço de três produtos e informe
 qual você deve comprar, sabendo que a decisão é sempre pelo mais barato.
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -24,12 +24,12 @@ public class Exercicio08 {
         System.out.println("Preço do 3º produto: ");
         double produto3 = scan.nextDouble();
         
-        if (produto1 < produto2 && produto1 < produto3){
-            System.out.println("O 1º produto deve ser comprado, é o mais barato!" );
-        } else if (produto2 < produto3 && produto2 < produto3) {
-            System.out.println("O 2º produto deve ser comprado, é o mais barato!" );
-        } else if (produto3 < produto2 && produto3 < produto1) {
-            System.out.println("O 3º produto deve ser comprado, é o mais barato!" );
+        if (produto1 <= produto2 && produto1 <= produto3){
+            System.out.println("O 1º produto deve ser comprado é o mais barato!" );
+        } else if (produto2 <= produto1 && produto2 <= produto3) {
+            System.out.println("O 2º produto deve ser comprado é o mais barato!" );
+        } else if (produto3 <= produto2 && produto3 <= produto1) {
+            System.out.println("O 3º produto deve ser comprado é o mais barato!" );
         }
     }
 }

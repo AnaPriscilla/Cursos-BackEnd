@@ -1,6 +1,6 @@
 /*
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -27,17 +27,19 @@ public class Exercicio16 {
             int c = scan.nextInt();
             
             int delta = ((b * b) - (4) * (a * c));
-            int x = (int) (( - b + (Math.sqrt(delta))) / (2 * a));
-            int y = (int) (( - b - (Math.sqrt(delta))) / (2 * a));
+            int x1 = (int) (( - b + (Math.sqrt(delta))) / (2 * a));
+            int x2 = (int) (( - b - (Math.sqrt(delta))) / (2 * a));
 
             if ( delta < 0 ) {
-                System.out.println("A equação não possui raízes reais!");
+                System.out.println("A equação não possui raízes reais! (Delta Negativo)");
             } else if ( delta == 0) {
-                System.out.println("Possui apenas 1 raíz real que é: " + x);
+                System.out.println("Deta: " + delta);
+                System.out.println("Possui apenas 1 raíz real que é: " + x1);
             } else {
+                System.out.println("Deta: " + delta);
                 System.out.println("Possui duas raízes reais: ");
-                System.out.println("1ª raíz: " + x);
-                System.out.println("2ª raíz: " + y);
+                System.out.println("1ª raíz: " + x1);
+                System.out.println("2ª raíz: " + x2);
             }
         } 
     }

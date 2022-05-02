@@ -1,7 +1,7 @@
 /*
 6 - Faça um programa que leia três números e mostre o maior deles.
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -23,11 +23,11 @@ public class Exercicio06 {
         System.out.print("Digite o 3º número: ");
         int numero3 = scan.nextInt();
         
-        if (numero1 > numero2 && numero1 > numero3) {
+        if (numero1 >= numero2 && numero1 >= numero3) {
             System.out.println("O maior número é o " + numero1);
-        } else if (numero2 > numero3 && numero2 > numero1){
+        } else if (numero2 >= numero3 && numero2 >= numero1){
             System.out.println("O maior número é o " + numero2);
-        } else if (numero3 > numero1 && numero3 > numero2) {
+        } else if (numero3 >= numero1 && numero3 >= numero2) {
             System.out.println("O maior número é o " + numero3);
         }
     }

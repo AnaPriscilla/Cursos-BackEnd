@@ -1,6 +1,6 @@
 /*
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
@@ -19,7 +19,46 @@ public class Exercicio22 {
                             + "Maçã ....... acima 5kg .. R$ 1,50" + "\n"
                             + "_________________________________");
         
-        System.out.print( "MENU de Opções: " + "\n" +
+        System.out.print("Entre com a quantidade (Kg) de morango: ");
+        double quantidade_morango = scan.nextDouble();
+        
+        System.out.print("Entre com a quantidade (Kg) de maçã: ");
+        double quantidade_maca = scan.nextDouble();
+        
+        double preco_kg_morango = 0;
+        
+        if (quantidade_morango <= 5){
+            preco_kg_morango = 2.5;
+        } else {
+            preco_kg_morango = 2.2;
+        }
+        
+        double preco_kg_maca = 0;
+        if (quantidade_maca <= 5){
+            preco_kg_maca = 1.8;
+        } else {
+            preco_kg_maca = 1.5;
+        }
+        
+        double preco_total_morango = (quantidade_morango * preco_kg_morango);
+        double preco_total_maca = (quantidade_maca * preco_kg_maca);
+        
+        double preco_parcial = (preco_kg_morango + preco_kg_maca);
+        double preco_total = preco_parcial;
+        
+        if ((quantidade_morango + quantidade_maca > 8) || (preco_parcial > 25)){
+            preco_total = preco_parcial - ((preco_parcial / 100) * 10);
+        }
+        
+        System.out.println("Preço total = " + preco_total_morango);
+        System.out.println("Preço total = " + preco_total_maca);
+        System.out.println("Preço total com desconto aplicado = " + preco_total);
+        
+        
+        
+        //COMO PENSEI:
+        /*
+         System.out.print( "MENU de Opções: " + "\n" +
                         "[1] para compra de morango: " + "\n" +
                         "[2] para compra de maçã: " + "\n" +
                         "[3] para comprar ambos: " + "\n" + 
@@ -44,9 +83,9 @@ public class Exercicio22 {
                 } else if (morango > 5 && morango <= 8) {
                     System.out.println("Valor a ser pago é de: " + compra_morango_acima);
                 } else if (morango > 8) {
-                    System.out.println("Valor a ser pago é de: " + ((compra_morango_acima * 0.10)* compra_morango_acima));
+                    System.out.println("Valor a ser pago é de: " + ((compra_morango_acima * 0.10) - compra_morango_acima));
                 } else if (totalcompra > 25) {
-                    System.out.println("Valor a ser pago é de: " + ((totalcompra * 0.10)* totalcompra));
+                    System.out.println("Valor a ser pago é de: " + ((totalcompra * 0.10) - totalcompra));
                 }
             } break;
             //MAÇÃ   
@@ -64,9 +103,9 @@ public class Exercicio22 {
                 } else if (maca > 5 && maca <= 8) {
                     System.out.println("Valor a ser pago é de: " + compra_maca_acima);
                 }  else if (maca > 8) {
-                    System.out.println("Valor a ser pago é de: " + ((compra_maca_acima * 0.10)* compra_maca_acima));
+                    System.out.println("Valor a ser pago é de: " + ((compra_maca_acima * 0.10) - compra_maca_acima));
                 } else if (totalcompra2 > 25) {
-                    System.out.println("Valor a ser pago é de: " + ((totalcompra2 * 0.10)* totalcompra2));
+                    System.out.println("Valor a ser pago é de: " + ((totalcompra2 * 0.10) - totalcompra2));
                 }
             } break;
             
@@ -92,13 +131,14 @@ public class Exercicio22 {
                 } else if (morango3 > 5 && morango3 <= 8 && maca3 > 5 && maca3 <= 8 ) {
                     System.out.println("Valor a ser pago é de: " + soma_morango_maca2);
                 } else if (morango3 > 8 && maca3 > 8) {
-                    System.out.println("Valor a ser pago é de: " + ((soma_morango_maca2 * 0.10)* soma_morango_maca2));
+                    System.out.println("Valor a ser pago é de: " + ((soma_morango_maca2 * 0.10) - soma_morango_maca2));
                 } else if (totalcompra3 > 25) {
-                    System.out.println("Valor a ser pago é de: " + ((soma_morango_maca2 * 0.10)* soma_morango_maca2));
+                    System.out.println("Valor a ser pago é de: " + ((soma_morango_maca2 * 0.10) - soma_morango_maca2));
                 }
             } break;
             
             default: System.out.println("Não existe essa opção no Menu");
         }
+        */
     }
 }

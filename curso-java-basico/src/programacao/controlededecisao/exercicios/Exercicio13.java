@@ -3,7 +3,7 @@
     da semana. (1 - Domingo, 2 - Segunda, etc), se digitar outro valor
     deve aparecer valor inválido.
  */
-package controlededecisao.exercicios;
+package programacao.controlededecisao.exercicios;
 
 import java.util.Scanner;
 
